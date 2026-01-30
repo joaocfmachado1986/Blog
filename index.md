@@ -29,16 +29,27 @@ title: Home
 
 <section class="grid-recursos">
     <a href="/arquivos/norma-fab.pdf" class="card-base card-download" target="_blank">
-        <strong>Normativa FAB: ICA 65-36</strong>
-        <span>Baixar PDF</span>
+        <strong style="color: #0f4c5c; font-size: 1.1rem; margin-bottom: 5px;">Normativa FAB</strong>
+        <span style="color: #64748b; font-size: 0.85rem; margin-bottom: 15px; font-weight: 400;">ICA 65-36</span>
+        <span style="color: #0f4c5c; font-size: 0.75rem; font-weight: 800; border-top: 1px solid #e2e8f0; padding-top: 10px;">
+            📥 BAIXAR PDF
+        </span>
     </a>
+
     <a href="/arquivos/norma-eb.pdf" class="card-base card-download" target="_blank">
-        <strong>Normativa EB: EB30-N-40.105</strong>
-        <span>Baixar PDF</span>
+        <strong style="color: #0f4c5c; font-size: 1.1rem; margin-bottom: 5px;">Normativa EB</strong>
+        <span style="color: #64748b; font-size: 0.85rem; margin-bottom: 15px; font-weight: 400;">EB30-N-40.105</span>
+        <span style="color: #0f4c5c; font-size: 0.75rem; font-weight: 800; border-top: 1px solid #e2e8f0; padding-top: 10px;">
+            📥 BAIXAR PDF
+        </span>
     </a>
+
     <a href="/arquivos/norma-mb.pdf" class="card-base card-download" target="_blank">
-        <strong>Normativa MB: DGMM-3009</strong>
-        <span>Baixar PDF</span>
+        <strong style="color: #0f4c5c; font-size: 1.1rem; margin-bottom: 5px;">Normativa MB</strong>
+        <span style="color: #64748b; font-size: 0.85rem; margin-bottom: 15px; font-weight: 400;">DGMM-3009</span>
+        <span style="color: #0f4c5c; font-size: 0.75rem; font-weight: 800; border-top: 1px solid #e2e8f0; padding-top: 10px;">
+            📥 BAIXAR PDF
+        </span>
     </a>
 </section>
 
