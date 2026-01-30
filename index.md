@@ -13,20 +13,39 @@ title: Home
     </div>
 </section>
 
-<section style="margin-top: 3rem;">
+<section>
     <div class="grid-publicacoes">
-      {% for post in site.posts %}
+      {% for post in site.posts limit:6 %}
         <div class="card-pub">
-            <a href="{{ post.url }}">{{ post.title }}</a>
             <span class="card-date">{{ post.date | date: "%d %b %Y" }}</span>
+            <a href="{{ post.url }}">{{ post.title }}</a>
+            <div class="card-excerpt">
+                {{ post.content | strip_html | truncatewords: 20 }}
+            </div>
         </div>
       {% endfor %}
     </div>
 </section>
 
-<section id="contacto" style="margin-top: 3rem;">
+<section class="grid-recursos">
+    <a href="/arquivos/norma-fab.pdf" class="card-recurso" target="_blank">
+        <strong>Normativa FAB</strong>
+        <span style="font-size: 0.7rem; font-weight: bold;">📥 BAIXAR PDF</span>
+    </a>
+    <a href="/arquivos/norma-eb.pdf" class="card-recurso" target="_blank">
+        <strong>Normativa EB</strong>
+        <span style="font-size: 0.7rem; font-weight: bold;">📥 BAIXAR PDF</span>
+    </a>
+    <a href="/arquivos/norma-mb.pdf" class="card-recurso" target="_blank">
+        <strong>Normativa MB</strong>
+        <span style="font-size: 0.7rem; font-weight: bold;">📥 BAIXAR PDF</span>
+    </a>
+</section>
+
+<section id="contacto">
     <div class="contact-box">
-        <p style="margin-bottom: 2rem; font-size: 0.95rem;">Incentivo ao leitor a entrar em contato comigo caso tenham dúvidas, críticas ou sugestões. Estou igualmente à disposição para diálogos acadêmicos, parcerias profissionais e trocas de experiências. Utilize o formulário abaixo para entrar em contato comigo e terei a grata satisfação de retornar em breve. Obrigado pelo interesse!</p>
+        <h3 style="margin: 0 0 1rem 0; font-weight: 800; color: #1e293b;">Contato</h3>
+        <p style="margin-bottom: 2rem; font-size: 0.95rem; text-align: justify;">Convido o leitor ao contato para o envio de dúvidas, críticas, sugestões, diálogos acadêmicos, parcerias profissionais e trocas de experiências. Utilize o formulário abaixo e terei a satisfação de retornar em breve. Obrigado pelo interesse!</p>
         
         <form action="https://formspree.io/f/mbdypapq" method="POST" class="contact-form">
             <input type="text" name="name" placeholder="Seu Nome" required>
