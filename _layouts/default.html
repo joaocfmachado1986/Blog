@@ -6,7 +6,7 @@
     <title>{{ page.title }} | João Machado</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;800&display=swap" rel="stylesheet">
     <style>
-        :root { --petroleo: #0f4c5c; --carvao: #1e293b; --grafite: #334155; --bg: #f8fafc; }
+        :root { --petroleo: #0f4c5c; --grafite: #334155; --bg: #f8fafc; }
         body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--grafite); margin: 0; line-height: 1.6; }
         
         header { 
@@ -25,38 +25,34 @@
         .container { max-width: 1000px; margin: 0 auto; padding: 2.5rem 1.5rem; }
         section { margin-bottom: 4rem; }
 
-        .main-title { font-size: 2.2rem; color: var(--carvao); font-weight: 800; margin: 0; }
+        /* ESTILO PADRÃO DE CARDS */
+        .card-base { 
+            background: white; padding: 1.8rem; border-radius: 12px; 
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); border: 1px solid #e2e8f0;
+            display: flex; flex-direction: column; transition: all 0.3s ease;
+            text-decoration: none;
+        }
+        .card-base:hover { transform: translateY(-5px); border-color: var(--petroleo); box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); }
 
         /* GRID DE PUBLICAÇÕES */
         .grid-publicacoes { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.5rem; }
-        .card-pub { 
-            background: white; padding: 1.8rem; border-radius: 12px; 
-            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); border: 1px solid #e2e8f0;
-            display: flex; flex-direction: column; transition: 0.3s;
-        }
-        .card-pub:hover { transform: translateY(-5px); border-color: var(--petroleo); }
-        .card-pub a { text-decoration: none; color: var(--petroleo); font-weight: 700; font-size: 1.1rem; margin-bottom: 10px; }
-        .card-date { font-size: 0.75rem; color: #94a3b8; text-transform: uppercase; margin-bottom: 15px; display: block; }
-        .card-excerpt { font-size: 0.85rem; color: #64748b; text-align: justify; }
+        .card-pub a { text-decoration: none; color: var(--petroleo); font-weight: 700; font-size: 1.15rem; margin-bottom: 10px; line-height: 1.3; }
+        .card-date { font-size: 0.75rem; color: #94a3b8; text-transform: uppercase; margin-bottom: 15px; display: block; font-weight: 600; }
+        .card-excerpt { font-size: 0.9rem; color: #64748b; text-align: justify; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
 
-        /* GRID DE DOWNLOADS (CARDS MENORES) */
-        .grid-recursos { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 1.2rem; }
-        .card-download { 
-            background: white; padding: 1.2rem; border-radius: 10px; border: 1px solid #e2e8f0;
-            text-align: center; text-decoration: none; color: var(--petroleo); transition: 0.2s;
-            display: flex; flex-direction: column; justify-content: center; align-items: center;
-        }
-        .card-download:hover { border-color: var(--petroleo); background: #f0fdfa; }
-        .card-download strong { display: block; font-size: 0.85rem; margin-bottom: 5px; color: var(--grafite); }
-        .card-download span { font-size: 0.7rem; font-weight: 800; color: var(--petroleo); text-transform: uppercase; }
+        /* GRID DE RECURSOS (CARDS MENORES) */
+        .grid-recursos { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 1.2rem; }
+        .card-download { padding: 1.2rem; min-height: 120px; justify-content: center; text-align: center; }
+        .card-download strong { color: var(--grafite); font-size: 0.9rem; margin-bottom: 5px; }
+        .card-download span { color: var(--petroleo); font-size: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.5px; }
 
-        /* CONTACTO */
+        /* FORMULÁRIO */
         .contact-box { background: white; padding: 3rem; border-radius: 15px; border: 1px solid #e2e8f0; }
         .contact-form { display: grid; gap: 1.2rem; margin-top: 2rem; }
-        .contact-form input, .contact-form textarea { width: 100%; padding: 0.9rem; border: 1px solid #e2e8f0; border-radius: 8px; font-family: inherit; box-sizing: border-box; }
-        .btn-enviar { background: var(--petroleo); color: white; border: none; padding: 1.1rem; border-radius: 8px; cursor: pointer; font-weight: 700; text-transform: uppercase; }
+        .contact-form input, .contact-form textarea { width: 100%; padding: 0.9rem; border: 1px solid #e2e8f0; border-radius: 8px; font-family: inherit; box-sizing: border-box; background: #f8fafc; }
+        .btn-enviar { background: var(--petroleo); color: white; border: none; padding: 1.1rem; border-radius: 8px; cursor: pointer; font-weight: 700; text-transform: uppercase; transition: 0.3s; }
 
-        footer { text-align: center; padding: 4rem 1.5rem; color: #94a3b8; font-size: 0.8rem; border-top: 1px solid #e2e8f0; }
+        footer { text-align: center; padding: 4rem 1.5rem; color: #94a3b8; font-size: 0.8rem; border-top: 1px solid #e2e8f0; background: white; }
     </style>
 </head>
 <body>
