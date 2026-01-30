@@ -1,30 +1,28 @@
----
-layout: default
-title: "Normas Militares de Certificação de Empresas de Manutenção"
-date: 2026-01-30
----
-
-<div class="post-card">
-
-A manutenção de material aeronáutico militar representa um pilar fundamental para a garantia da operacionalidade e segurança de voo das Forças Armadas. No contexto brasileiro, a certificação das empresas habilitadas a prestar tais serviços segue um modelo descentralizado, conferindo autonomia a cada Força Singular para estabelecer seus próprios critérios e normativas. 
-
-Isso significa que a Aeronáutica, o Exército e a Marinha possuem a prerrogativa e a responsabilidade de desenvolver e aplicar seus respectivos arcabouços normativos para a habilitação de organizações de manutenção.
-
-Para facilitar o acesso a este complexo panorama regulatório, disponibilizamos as normas de certificação prescritas por cada uma das Forças Singulares:
-
-<div class="download-box">
-    <strong>📁 Documentos para Download:</strong><br><br>
-    
-    1. <strong>Normativa Aeronáutica (FAB)</strong><br>
-    <a href="#" class="btn-download">Baixar PDF</a><br><br>
-    
-    2. <strong>Normativa Exército Brasileiro (EB)</strong><br>
-    <a href="#" class="btn-download">Baixar PDF</a><br><br>
-    
-    3. <strong>Normativa Marinha do Brasil (MB)</strong><br>
-    <a href="#" class="btn-download">Baixar PDF</a>
-</div>
-
-</div>
-
-[⬅ Voltar para o início](/)
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ page.title }} | João Machado</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background: #f8fafc; color: #1e293b; margin: 0; }
+        header { background: white; padding: 1.2rem 10%; border-bottom: 1px solid #e2e8f0; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-weight: 600; color: #2563eb; text-decoration: none; text-transform: uppercase; letter-spacing: 1px; }
+        .container { max-width: 800px; margin: 3rem auto; padding: 0 1.5rem; }
+        .post-card { background: white; padding: 2.5rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        .download-box { background: #eff6ff; padding: 1.5rem; border-radius: 8px; border: 1px solid #dbeafe; margin-top: 2rem; }
+        .btn-download { background: #2563eb; color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none; display: inline-block; margin-top: 10px; font-weight: 600; }
+        .profile-pic { width: 100px; height: 100px; border-radius: 50%; object-fit: cover; border: 3px solid white; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+        .intro-card { display: flex; align-items: center; gap: 20px; background: white; padding: 20px; border-radius: 12px; margin-bottom: 30px; box-shadow: 0 2px 10px rgba(0,0,0,0.03); }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="/" class="logo">JOÃO MACHADO | INSIGHTS</a>
+        <nav><a href="/" style="text-decoration:none; color:#64748b; font-size: 14px;">Início</a></nav>
+    </header>
+    <main class="container">
+        {{ content }}
+    </main>
+</body>
+</html>
