@@ -3,31 +3,39 @@ layout: default
 title: Home
 ---
 
-<div class="post-card" style="display: flex; align-items: center; gap: 2rem;">
-    <img src="/foto-perfil.jpg" style="width: 100px; height: 100px; border-radius: 50%; object-fit: cover; border: 2px solid #e2e8f0;" alt="João Machado">
+<section style="display: flex; align-items: center; gap: 2.5rem; background: white; padding: 2.5rem; border-radius: 12px; border: 1px solid #e2e8f0;">
+    <img src="/foto-perfil.jpg" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; border: 3px solid #f1f5f9;" alt="João Machado">
     <div>
-        <h1 style="margin: 0; font-size: 1.8rem; color: #334155;">João Machado</h1>
-        <p style="margin: 0.5rem 0 0; color: #64748b;">Especialista em Certificação e Pesquisa Científica Aeronáutica.</p>
+        <h1 style="margin: 0; font-size: 2rem; color: #1e293b;">Bem-vindo ao meu Portal</h1>
+        <p style="margin: 0.5rem 0 0; color: #64748b; font-size: 1.1rem;">Explorações técnicas sobre <strong>Certificação Aeronáutica</strong>, Manutenção e Pesquisa Científica.</p>
     </div>
-</div>
+</section>
 
-<div class="post-card">
-    <h2 style="margin-top: 0; color: #0f4c5c;">Publicações</h2>
-    <ul>
+<section>
+    <h2 class="section-title">Publicações Recentes</h2>
+    <div class="grid-publicacoes">
       {% for post in site.posts %}
-        <li><a href="{{ post.url }}">{{ post.title }}</a> - {{ post.date | date: "%d/%m/%Y" }}</li>
+        <div class="card-pub">
+            <a href="{{ post.url }}">{{ post.title }}</a>
+            <span class="card-date">{{ post.date | date: "%d %b %Y" }}</span>
+        </div>
       {% endfor %}
-    </ul>
-</div>
+      {% if site.posts.size == 0 %}
+        <p style="color: #94a3b8; font-style: italic;">As primeiras publicações estarão disponíveis em breve.</p>
+      {% endif %}
+    </div>
+</section>
 
-<div class="post-card" id="contato">
-    <h2 style="margin-top: 0; color: #0f4c5c;">Contato</h2>
-    <p>Incentivo ao leitor a entrar em contato comigo caso tenham dúvidas, críticas ou sugestões. Preencha o formulário abaixo e em breve responderei. Obrigado!</p>
-
-    <form action="https://formspree.io/f/mbdypapq" method="POST" class="contact-form">
-        <input type="text" name="name" placeholder="Seu Nome" required style="width:100%; margin-bottom:10px; padding:8px;">
-        <input type="email" name="email" placeholder="Seu E-mail" required style="width:100%; margin-bottom:10px; padding:8px;">
-        <textarea name="message" placeholder="Sua Mensagem" required style="width:100%; margin-bottom:10px; padding:8px; height:100px;"></textarea>
-        <button type="submit" class="btn-enviar">Enviar Mensagem</button>
-    </form>
-</div>
+<section id="contacto">
+    <h2 class="section-title">Contacto</h2>
+    <div class="contact-box">
+        <p style="margin-bottom: 2rem;">Incentivo ao leitor a entrar em contacto comigo caso tenham dúvidas, críticas ou sugestões. Estou igualmente à disposição para diálogos acadêmicos e parcerias profissionais.</p>
+        
+        <form action="https://formspree.io/f/mbdypapq" method="POST" class="contact-form">
+            <input type="text" name="name" placeholder="Seu Nome" required>
+            <input type="email" name="_replyto" placeholder="Seu E-mail" required>
+            <textarea name="message" rows="5" placeholder="Sua Mensagem" required></textarea>
+            <button type="submit" class="btn-enviar">Enviar Mensagem</button>
+        </form>
+    </div>
+</section>
