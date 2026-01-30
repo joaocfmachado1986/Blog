@@ -4,60 +4,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ page.title }} | João Machado</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
         :root { 
             --petroleo: #0f4c5c; 
-            --carvao: #1e293b; 
-            --bg: #f8fafc; 
+            --grafite: #334155; 
+            --bg: #f1f5f9; 
         }
-        body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--carvao); margin: 0; line-height: 1.6; }
+        body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--grafite); margin: 0; line-height: 1.6; }
         
+        /* HEADER COM LOGOTIPO PLANNEADO */
         header { 
-            background: white; padding: 1.2rem 10%; 
+            background: white; padding: 1rem 8%; 
             display: flex; justify-content: space-between; align-items: center;
             border-bottom: 1px solid #e2e8f0; position: sticky; top: 0; z-index: 100;
         }
-        
-        /* Logotipo Refinado: JOÃO MACHADO com mais peso e espaçamento */
         .logo { text-decoration: none; display: flex; align-items: center; }
-        .logo-nome { 
-            color: var(--carvao); 
-            font-weight: 800; 
-            text-transform: uppercase; 
-            letter-spacing: 1.5px; 
-            font-size: 1.2rem;
-        }
-        .logo-divisor { color: #cbd5e1; margin: 0 10px; font-weight: 300; font-size: 1.2rem; }
-        .logo-insights { 
-            color: var(--petroleo); 
-            font-weight: 300; 
-            text-transform: uppercase; 
-            letter-spacing: 1px;
-            font-size: 1rem;
-        }
+        .logo-nome { color: var(--grafite); font-weight: 300; letter-spacing: 1px; font-size: 1.1rem; text-transform: uppercase; }
+        .logo-divisor { color: #cbd5e1; margin: 0 8px; font-weight: 300; }
+        .logo-insights { color: var(--petroleo); font-weight: 700; letter-spacing: 0.5px; font-size: 1.1rem; text-transform: uppercase; }
 
-        nav a { text-decoration: none; color: #64748b; margin-left: 1.5rem; font-size: 0.9rem; font-weight: 400; transition: color 0.3s; }
+        nav a { text-decoration: none; color: #64748b; margin-left: 1.5rem; font-size: 0.85rem; font-weight: 400; transition: 0.3s; }
         nav a:hover { color: var(--petroleo); }
 
-        .container { max-width: 850px; margin: 3rem auto; padding: 0 1.5rem; }
-        .post-card { background: white; padding: 2.5rem; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); margin-bottom: 2.5rem; }
-        
-        .contact-form { display: grid; gap: 1rem; margin-top: 1.5rem; }
+        .container { max-width: 1000px; margin: 0 auto; padding: 2rem 1.5rem; }
+
+        /* SEÇÕES DA MAINPAGE */
+        section { margin-bottom: 4rem; }
+        .section-title { color: var(--petroleo); font-size: 1.5rem; margin-bottom: 1.5rem; border-left: 4px solid var(--petroleo); padding-left: 15px; }
+
+        /* GRID DE PUBLICAÇÕES (CARDS QUADRADOS) */
+        .grid-publicacoes { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); 
+            gap: 1.5rem; 
+        }
+        .card-pub { 
+            background: white; padding: 1.5rem; border-radius: 8px; 
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05); border: 1px solid #e2e8f0;
+            display: flex; flex-direction: column; justify-content: space-between;
+            aspect-ratio: 1 / 1; transition: transform 0.2s;
+        }
+        .card-pub:hover { transform: translateY(-5px); border-color: var(--petroleo); }
+        .card-pub a { text-decoration: none; color: var(--grafite); font-weight: 700; font-size: 1rem; display: block; margin-bottom: 10px; }
+        .card-date { font-size: 0.75rem; color: #94a3b8; text-transform: uppercase; }
+
+        /* FORMULÁRIO DE CONTACTO */
+        .contact-box { background: white; padding: 2.5rem; border-radius: 12px; border: 1px solid #e2e8f0; }
+        .contact-form { display: grid; gap: 1rem; }
         .contact-form input, .contact-form textarea { 
             width: 100%; padding: 0.8rem; border: 1px solid #e2e8f0; border-radius: 6px; font-family: inherit; box-sizing: border-box;
         }
         .btn-enviar { 
-            background: var(--petroleo); color: white; border: none; padding: 0.8rem; 
-            border-radius: 6px; cursor: pointer; font-weight: 600; transition: background 0.3s;
+            background: var(--petroleo); color: white; border: none; padding: 1rem; 
+            border-radius: 6px; cursor: pointer; font-weight: 700; text-transform: uppercase;
         }
-        .btn-enviar:hover { background: #0a3a46; }
 
-        footer { text-align: center; padding: 3rem; color: #94a3b8; font-size: 0.8rem; }
+        footer { text-align: center; padding: 3rem; color: #94a3b8; font-size: 0.8rem; border-top: 1px solid #e2e8f0; margin-top: 2rem; }
     </style>
 </head>
 <body>
-
     <header>
         <a href="/" class="logo">
             <span class="logo-nome">JOÃO MACHADO</span>
@@ -70,13 +76,12 @@
         </nav>
     </header>
 
-    <main class="container">
+    <div class="container">
         {{ content }}
-    </main>
+    </div>
 
     <footer>
-        &copy; 2026 João Machado. Pesquisa e Certificação Aeronáutica.
+        &copy; 2026 João Machado. Especialista em Certificação Aeronáutica.
     </footer>
-
 </body>
 </html>
