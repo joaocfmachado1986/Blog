@@ -6,11 +6,11 @@
     <title>{{ page.title }} | João Machado</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;800&display=swap" rel="stylesheet">
     <style>
-        :root { --petroleo: #0f4c5c; --grafite: #334155; --bg: #f1f5f9; }
+        :root { --petroleo: #0f4c5c; --grafite: #334155; --bg: #f8fafc; }
         body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--grafite); margin: 0; line-height: 1.6; }
         
         header { 
-            background: white; padding: 1rem 8%; 
+            background: white; padding: 1.1rem 8%; 
             display: flex; justify-content: space-between; align-items: center;
             border-bottom: 1px solid #e2e8f0; position: sticky; top: 0; z-index: 100;
         }
@@ -22,42 +22,45 @@
         nav a { text-decoration: none; color: #64748b; margin-left: 1.5rem; font-size: 0.85rem; font-weight: 400; transition: 0.3s; }
         nav a:hover { color: var(--petroleo); }
 
-        .container { max-width: 1000px; margin: 0 auto; padding: 2rem 1.5rem; }
-        section { margin-bottom: 3.5rem; }
+        .container { max-width: 1000px; margin: 0 auto; padding: 2.5rem 1.5rem; }
+        section { margin-bottom: 4rem; }
 
-        /* GRID DE PUBLICAÇÕES COM PRÉVIA */
-        .grid-publicacoes { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.5rem; }
+        /* GRID DE PUBLICAÇÕES COM PREVIA (SNIPPET) */
+        .grid-publicacoes { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.5rem; }
         .card-pub { 
-            background: white; padding: 1.5rem; border-radius: 12px; 
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05); border: 1px solid #e2e8f0;
-            display: flex; flex-direction: column; transition: transform 0.2s;
+            background: white; padding: 1.8rem; border-radius: 12px; 
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); border: 1px solid #e2e8f0;
+            display: flex; flex-direction: column; transition: all 0.3s ease;
         }
-        .card-pub:hover { transform: translateY(-5px); border-color: var(--petroleo); }
-        .card-pub a { text-decoration: none; color: var(--petroleo); font-weight: 700; font-size: 1.1rem; margin-bottom: 8px; }
-        .card-date { font-size: 0.7rem; color: #94a3b8; text-transform: uppercase; margin-bottom: 12px; display: block; }
-        .card-excerpt { font-size: 0.85rem; color: #64748b; text-align: justify; line-height: 1.5; }
+        .card-pub:hover { transform: translateY(-5px); border-color: var(--petroleo); box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); }
+        .card-pub a { text-decoration: none; color: var(--petroleo); font-weight: 700; font-size: 1.15rem; margin-bottom: 10px; line-height: 1.3; }
+        .card-date { font-size: 0.75rem; color: #94a3b8; text-transform: uppercase; margin-bottom: 15px; display: block; font-weight: 600; }
+        .card-excerpt { font-size: 0.9rem; color: #64748b; text-align: justify; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
 
-        /* DOWNLOADS DIRETOS (SEM TÍTULO DE SEÇÃO) */
-        .grid-recursos { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 1rem; margin-top: 2rem; }
-        .card-recurso { 
-            background: #eff6ff; padding: 1.2rem; border-radius: 8px; border: 1px solid #dbeafe;
-            text-align: center; transition: 0.2s; text-decoration: none; color: var(--petroleo);
+        /* CARDS DE DOWNLOAD (RECURSOS) */
+        .grid-recursos { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 1.2rem; }
+        .card-download { 
+            background: #f1f5f9; padding: 1.5rem; border-radius: 10px; border: 1px solid #e2e8f0;
+            text-align: center; text-decoration: none; color: var(--petroleo); transition: 0.2s;
         }
-        .card-recurso:hover { background: #dbeafe; }
-        .card-recurso strong { display: block; font-size: 0.85rem; margin-bottom: 8px; }
+        .card-download:hover { background: #e2e8f0; border-color: var(--petroleo); }
+        .icon-pdf { font-size: 1.5rem; margin-bottom: 10px; display: block; }
+        .card-download strong { display: block; font-size: 0.9rem; margin-bottom: 5px; color: var(--grafite); }
+        .card-download span { font-size: 0.7rem; font-weight: 800; color: var(--petroleo); text-transform: uppercase; }
+
+        /* BOTAO VER TODOS */
+        .btn-ver-todos { display: inline-block; margin-top: 2rem; padding: 0.6rem 1.2rem; border: 1px solid var(--petroleo); color: var(--petroleo); border-radius: 6px; text-decoration: none; font-size: 0.85rem; font-weight: 600; transition: 0.3s; }
+        .btn-ver-todos:hover { background: var(--petroleo); color: white; }
 
         /* CONTACTO */
-        .contact-box { background: white; padding: 2.5rem; border-radius: 12px; border: 1px solid #e2e8f0; }
-        .contact-form { display: grid; gap: 1rem; margin-top: 1.5rem; }
-        .contact-form input, .contact-form textarea { 
-            width: 100%; padding: 0.8rem; border: 1px solid #e2e8f0; border-radius: 6px; font-family: inherit; box-sizing: border-box;
-        }
-        .btn-enviar { 
-            background: var(--petroleo); color: white; border: none; padding: 1rem; 
-            border-radius: 6px; cursor: pointer; font-weight: 700; text-transform: uppercase;
-        }
+        .contact-box { background: white; padding: 3rem; border-radius: 15px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
+        .contact-form { display: grid; gap: 1.2rem; margin-top: 2rem; }
+        .contact-form input, .contact-form textarea { width: 100%; padding: 0.9rem; border: 1px solid #e2e8f0; border-radius: 8px; font-family: inherit; font-size: 0.95rem; box-sizing: border-box; background: #f8fafc; }
+        .btn-enviar { background: var(--petroleo); color: white; border: none; padding: 1.1rem; border-radius: 8px; cursor: pointer; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; transition: 0.3s; }
+        .btn-enviar:hover { background: #0a3a46; transform: scale(1.01); }
 
-        footer { text-align: center; padding: 3rem; color: #94a3b8; font-size: 0.8rem; border-top: 1px solid #e2e8f0; margin-top: 2rem; }
+        /* RODAPÉ */
+        footer { text-align: center; padding: 4rem 1.5rem; color: #94a3b8; font-size: 0.8rem; border-top: 1px solid #e2e8f0; background: white; }
     </style>
 </head>
 <body>
@@ -71,9 +74,7 @@
             <a href="/repositorio">Repositório</a>
         </nav>
     </header>
-    <div class="container">
-        {{ content }}
-    </div>
-    <footer>&copy; 2026 João Machado. Pesquisa e Certificação Aeronáutica.</footer>
+    <div class="container">{{ content }}</div>
+    <footer>&copy; 2026 João Machado. Pesquisa Científica e Certificação Aeronáutica.</footer>
 </body>
 </html>
