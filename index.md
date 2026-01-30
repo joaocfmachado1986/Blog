@@ -3,37 +3,34 @@ layout: default
 title: Home
 ---
 
-<div class="intro-card">
-    <img src="/foto-perfil.jpg" class="profile-pic" alt="João Machado">
+<div class="post-card" style="display: flex; align-items: center; gap: 2rem;">
+    <img src="/foto-perfil.jpg" style="width: 100px; height: 100px; border-radius: 50%; object-fit: cover;" alt="João Machado">
     <div>
-        <h2 style="margin:0; color: #1e293b;">João Machado</h2>
-        <p style="margin:5px 0 0; color:#64748b; font-size: 1.1rem;">Especialista em Certificação e Pesquisa Científica Aeronáutica.</p>
+        <h1 style="margin: 0; font-size: 1.8rem;">João Machado</h1>
+        <p style="margin: 0.5rem 0 0; color: #64748b;">Especialista em Certificação e Pesquisa Científica Aeronáutica.</p>
     </div>
 </div>
 
 <div class="post-card">
-    <h3 style="margin-top: 0; color: #1e293b; border-bottom: 2px solid #eff6ff; padding-bottom: 10px;">
-        Publicações e Insights Recentes
-    </h3>
-    
-    <p style="color: #64748b; font-size: 0.9rem; margin-bottom: 1.5rem;">
-        Explore as últimas análises técnicas e documentos de pesquisa científica disponibilizados abaixo.
-    </p>
-
+    <h2 style="margin-top: 0; color: #0f4c5c;">Publicações</h2>
     <ul style="list-style: none; padding: 0;">
       {% for post in site.posts %}
-        <li style="margin-bottom: 15px; padding: 10px; border-radius: 8px; background: #f8fafc; transition: transform 0.2s;">
-          <a href="{{ post.url }}" style="text-decoration: none; color: #2563eb; font-weight: 600; font-size: 1.1rem;">
-            {{ post.title }}
-          </a>
-          <div style="font-size: 0.8rem; color: #94a3b8; margin-top: 4px;">
-            Publicado em {{ post.date | date: "%d/%m/%Y" }}
-          </div>
+        <li style="margin-bottom: 1rem; border-bottom: 1px solid #f1f5f9; padding-bottom: 10px;">
+          <a href="{{ post.url }}" style="text-decoration: none; color: #334155; font-weight: 600;">{{ post.title }}</a>
+          <span style="display: block; font-size: 0.8rem; color: #94a3b8;">{{ post.date | date: "%d/%m/%Y" }}</span>
         </li>
       {% endfor %}
     </ul>
+</div>
 
-    {% if site.posts.size == 0 %}
-      <p style="color: #94a3b8; font-style: italic;">Nenhuma publicação encontrada no momento.</p>
-    {% endif %}
+<div class="post-card" id="contato">
+    <h2 style="margin-top: 0; color: #0f4c5c;">Contato</h2>
+    <p>Incentivo ao leitor a entrar em contato comigo caso tenham dúvidas, críticas ou sugestões. Estou igualmente à disposição para diálogos acadêmicos, parcerias profissionais e trocas de experiências. Utilize o formulário abaixo para entrar em contato comigo e terei a grata satisfação de retornar em breve. Obrigado pelo interesse!</p>
+
+    <form action="https://formspree.io/f/SEU_ID_AQUI" method="POST" class="contact-form">
+        <input type="text" name="name" placeholder="Seu Nome" required>
+        <input type="email" name="_replyto" placeholder="Seu E-mail" required>
+        <textarea name="message" rows="4" placeholder="Sua Mensagem" required></textarea>
+        <button type="submit" class="btn-enviar">Enviar Mensagem</button>
+    </form>
 </div>
