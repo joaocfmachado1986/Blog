@@ -13,7 +13,6 @@
         }
         body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--grafite); margin: 0; line-height: 1.6; }
         
-        /* HEADER COM LOGOTIPO PLANNEADO */
         header { 
             background: white; padding: 1rem 8%; 
             display: flex; justify-content: space-between; align-items: center;
@@ -29,11 +28,8 @@
 
         .container { max-width: 1000px; margin: 0 auto; padding: 2rem 1.5rem; }
 
-        /* SEÇÕES DA MAINPAGE */
-        section { margin-bottom: 4rem; }
         .section-title { color: var(--petroleo); font-size: 1.5rem; margin-bottom: 1.5rem; border-left: 4px solid var(--petroleo); padding-left: 15px; }
 
-        /* GRID DE PUBLICAÇÕES (CARDS QUADRADOS) */
         .grid-publicacoes { 
             display: grid; 
             grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); 
@@ -49,7 +45,6 @@
         .card-pub a { text-decoration: none; color: var(--grafite); font-weight: 700; font-size: 1rem; display: block; margin-bottom: 10px; }
         .card-date { font-size: 0.75rem; color: #94a3b8; text-transform: uppercase; }
 
-        /* FORMULÁRIO DE CONTACTO */
         .contact-box { background: white; padding: 2.5rem; border-radius: 12px; border: 1px solid #e2e8f0; }
         .contact-form { display: grid; gap: 1rem; }
         .contact-form input, .contact-form textarea { 
@@ -59,6 +54,10 @@
             background: var(--petroleo); color: white; border: none; padding: 1rem; 
             border-radius: 6px; cursor: pointer; font-weight: 700; text-transform: uppercase;
         }
+
+        .post-card { background: white; padding: 2.5rem; border-radius: 12px; border: 1px solid #e2e8f0; margin-bottom: 2rem; }
+        .download-box { background: #eff6ff; padding: 1.5rem; border-radius: 8px; border: 1px solid #dbeafe; margin-top: 2rem; }
+        .btn-download { background: var(--petroleo); color: white !important; padding: 8px 15px; border-radius: 5px; text-decoration: none; display: inline-block; font-weight: 600; font-size: 12px; margin-top: 5px; }
 
         footer { text-align: center; padding: 3rem; color: #94a3b8; font-size: 0.8rem; border-top: 1px solid #e2e8f0; margin-top: 2rem; }
     </style>
@@ -72,6 +71,7 @@
         </a>
         <nav>
             <a href="/">Início</a>
+            <a href="/sobre">Sobre Mim</a>
             <a href="/repositorio">Repositório</a>
         </nav>
     </header>
@@ -81,7 +81,7 @@
     </div>
 
     <footer>
-        &copy; 2026 João Machado. Especialista em Certificação Aeronáutica.
+        &copy; 2026 João Machado. Pesquisa e Certificação Aeronáutica.
     </footer>
 </body>
 </html>
