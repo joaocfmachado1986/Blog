@@ -8,7 +8,7 @@ title: Home
     <div>
         <h1 style="margin: 0; font-size: 1.8rem; color: #0f4c5c; font-weight: 800;">Bem-vindo!</h1>
         <p style="margin: 1rem 0 0; color: #64748b; font-size: 1.05rem; text-align: justify; line-height: 1.7;">
-            Aqui eu compartilho pesquisas e ideias de minha autoria ou de autores de meu interesse, além de documentos, sobretudo relacionados às minhas áreas de interesse, como Direito Aeronáutico, Base Industrial de Defesa, Políticas Públicas, Manutenção Aeronáutica e Normas Militares de Certificação de Empresas de Manutenção Aeronáutica. <a href="/sobre" style="color: #0f4c5c; font-weight: 700; text-decoration: underline;">Clique aqui</a> para saber mais sobre mim.
+            Aqui eu compartilho pesquisas e ideias de minha autoria ou de autores de meu interesse, além de documentos, sobretudo relacionados às minhas áreas de interesse, como Direito Aeronáutico, Base Industrial de Defesa, Políticas Públicas, Manutenção Aeronáutica e Normas Militares de Certificação de Empresas de Manutenção Aeronáutica. <a href="/sobre" style="color: #0f4c5c; font-weight: 700; text-decoration: none;">Clique aqui</a> para saber mais sobre mim.
         </p>
     </div>
 </section>
@@ -31,25 +31,28 @@ title: Home
     <a href="/arquivos/norma-fab.pdf" class="card-base card-download" target="_blank">
         <strong style="color: #0f4c5c; font-size: 1.1rem; margin-bottom: 5px;">Normativa FAB</strong>
         <span style="color: #64748b; font-size: 0.85rem; margin-bottom: 15px; font-weight: 400;">ICA 65-36</span>
-        <span style="color: #0f4c5c; font-size: 0.75rem; font-weight: 800; border-top: 1px solid #e2e8f0; padding-top: 10px;">
-            📥 BAIXAR PDF
-        </span>
+        <div style="border-top: 1px solid #e2e8f0; padding-top: 10px; display: flex; flex-direction: column; align-items: center; gap: 5px;">
+            <span style="color: #0f4c5c; font-size: 0.75rem; font-weight: 800;">BAIXAR PDF</span>
+            <span style="font-size: 1.2rem;">📥</span>
+        </div>
     </a>
 
     <a href="/arquivos/norma-eb.pdf" class="card-base card-download" target="_blank">
         <strong style="color: #0f4c5c; font-size: 1.1rem; margin-bottom: 5px;">Normativa EB</strong>
         <span style="color: #64748b; font-size: 0.85rem; margin-bottom: 15px; font-weight: 400;">EB30-N-40.105</span>
-        <span style="color: #0f4c5c; font-size: 0.75rem; font-weight: 800; border-top: 1px solid #e2e8f0; padding-top: 10px;">
-            📥 BAIXAR PDF
-        </span>
+        <div style="border-top: 1px solid #e2e8f0; padding-top: 10px; display: flex; flex-direction: column; align-items: center; gap: 5px;">
+            <span style="color: #0f4c5c; font-size: 0.75rem; font-weight: 800;">BAIXAR PDF</span>
+            <span style="font-size: 1.2rem;">📥</span>
+        </div>
     </a>
 
     <a href="/arquivos/norma-mb.pdf" class="card-base card-download" target="_blank">
         <strong style="color: #0f4c5c; font-size: 1.1rem; margin-bottom: 5px;">Normativa MB</strong>
         <span style="color: #64748b; font-size: 0.85rem; margin-bottom: 15px; font-weight: 400;">DGMM-3009</span>
-        <span style="color: #0f4c5c; font-size: 0.75rem; font-weight: 800; border-top: 1px solid #e2e8f0; padding-top: 10px;">
-            📥 BAIXAR PDF
-        </span>
+        <div style="border-top: 1px solid #e2e8f0; padding-top: 10px; display: flex; flex-direction: column; align-items: center; gap: 5px;">
+            <span style="color: #0f4c5c; font-size: 0.75rem; font-weight: 800;">BAIXAR PDF</span>
+            <span style="font-size: 1.2rem;">📥</span>
+        </div>
     </a>
 </section>
 
