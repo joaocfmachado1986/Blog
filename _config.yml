@@ -1,3 +1,8 @@
 title: João Machado | Insights
 url: "https://joaocfmachado.com"
 baseurl: ""
+markdown: kramdown
+highlighter: rouge
+exclude:
+  - Gemfile
+  - Gemfile.lock
